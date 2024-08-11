@@ -7,7 +7,7 @@ The current version of JDBC Specification is 4.2(JSR 221). There is also a GitBo
 Let's [READ](SUMMARY.md)!
 
  
-《JDBC 4.2 规范》中文翻译。至今为止，JDBC 规范的最新版本为 4.2（JSR 221）。[点此](jdbc4.2-fr-spec.pdf)下载规范。
+《JDBC 4.2 规范》中文翻译。至今为止，JDBC 规范的最新版本为 4.3（JSR 221）。[点此](jdbc4.2-fr-spec.pdf)下载规范。
  
 利用业余时间对此进行翻译，并在原文的基础上，插入配图，图文并茂方便用户理解。如有勘误欢迎指正，[点此](https://github.com/waylau/jdbc-specification/issues)提问。如有兴趣，也可以参与到本翻译工作中来 :)
 
@@ -24,8 +24,8 @@ Let's [READ](SUMMARY.md)!
 
 ### Contact 联系作者:
 
-* Blog: [waylau.com](https://waylau.com)
-* Gmail: [waylau521(at)gmail.com](mailto:waylau521@gmail.com)
-* Weibo: [waylau521](http://weibo.com/waylau521)
-* Twitter: [waylau521](https://twitter.com/waylau521)
-* GitHub : [waylau](https://github.com/waylau)
+* GitHub : [KimoriTama](https://github.com/KimoriTama)
+
+### 协议说明
+
+JDBC 4.2 Specification（JSR 221）.《JDBC 4.2 规范》中文翻译 © 2024 by KimoriTama is licensed under CC BY-SA 4.0 
