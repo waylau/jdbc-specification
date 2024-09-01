@@ -101,42 +101,42 @@
 
 **表 B-3** 从 JDBC 类型到 Java 对象类型的映射
 
-| JDBC 类型 | Java 对象类型 |
-| --- | --- |
-| CHAR | String |
-| VARCHAR | String |
-| LONGVARCHAR | String |
-| NUMERIC | java.math.BigDecimal |
-| DECIMAL | java.math.BigDecimal |
-| BIT | Boolean |
-| BOOLEAN | Boolean |
-| TINYINT | Integer |
-| SMALLINT | Integer | 
-| INTEGER | Integer |
-| BIGINT | Long |
-| REAL | Float |
-| FLOAT | Double |
-| DOUBLE | Double |
-| BINARY | byte[] |
-| VARBINARY | byte[] |
-| LONGVARBINARY | byte[] |
-| DATE | java.sql.Date |
-| TIME | java.sql.Time |
-| TIMESTAMP | java.sql.Timestamp |
-| DISTINCT | 底层类型的对象类型 |
-| CLOB | java.sql.Clob |
-| BLOB | java.sql.Blob |
-| ARRAY | java.sql.Array |
-| STRUCT | java.sql.Struct 或 java.sql.SQLData |
-| REF | java.sql.Ref |
-| DATALINK | java.net.URL |
-| JAVA_OBJECT | 底层的 Java 类 |
-| ROWID | java.sql.RowId |
-| NCHAR | String |
-| NVARCHAR | String |
-| LONGNVARCHAR | String |
-| NCLOB | java.sql.NClob |
-| SQLXML | java.sql.SQLXML |
+| JDBC 类型       | Java 对象类型                          |
+| ------------- | ---------------------------------- |
+| CHAR          | String                             |
+| VARCHAR       | String                             |
+| LONGVARCHAR   | String                             |
+| NUMERIC       | java.math.BigDecimal               |
+| DECIMAL       | java.math.BigDecimal               |
+| BIT           | Boolean                            |
+| BOOLEAN       | Boolean                            |
+| TINYINT       | Integer                            |
+| SMALLINT      | Integer                            |
+| INTEGER       | Integer                            |
+| BIGINT        | Long                               |
+| REAL          | Float                              |
+| FLOAT         | Double                             |
+| DOUBLE        | Double                             |
+| BINARY        | byte[]                             |
+| VARBINARY     | byte[]                             |
+| LONGVARBINARY | byte[]                             |
+| DATE          | java.sql.Date                      |
+| TIME          | java.sql.Time                      |
+| TIMESTAMP     | java.sql.Timestamp                 |
+| DISTINCT      | 底层类型的对象类型                          |
+| CLOB          | java.sql.Clob                      |
+| BLOB          | java.sql.Blob                      |
+| ARRAY         | java.sql.Array                     |
+| STRUCT        | java.sql.Struct 或 java.sql.SQLData |
+| REF           | java.sql.Ref                       |
+| DATALINK      | java.net.URL                       |
+| JAVA_OBJECT   | 底层的 Java 类                         |
+| ROWID         | java.sql.RowId                     |
+| NCHAR         | String                             |
+| NVARCHAR      | String                             |
+| LONGNVARCHAR  | String                             |
+| NCLOB         | java.sql.NClob                     |
+| SQLXML        | java.sql.SQLXML                    |
 
 
 ## B.4 Java 对象类型映射到 JDBC 类型
@@ -223,32 +223,32 @@
 
 **表 B-6** 使用 `ResultSet` getter 方法检索 JDBC 数据类型
 
-| Java 对象类型 | 推荐的 JDBC 类型 | 支持的 JDBC 类型 |
-| --- | --- | --- |
-| getByte | TINYINT | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR, ROWID |
-| getShort | SMALLINT | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR |
-| getInt | INTEGER | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR |
-| getLong | BIGINT | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR |
-| getFloat | REAL | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR |
-| getDouble | FLOAT, DOUBLE | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR |
-| getBigDecimal | DECIMAL, NUMERIC | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR |
-| getBoolean | BIT, BOOLEAN | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR |
-| getString | CHAR, VARCHAR | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, DATE, TIME, TIMESTAMP, DATALINK, NCHAR, NVARCHAR, LONGNVARCHAR |
-| getNString | NCHAR, NVARCHAR | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, DATE, TIME, TIMESTAMP, DATALINK, NCHAR, NVARCHAR, LONGNVARCHAR |
-| getBytes | BINARY, VARBINARY | BINARY, VARBINARY, LONGVARBINARY |
-| getDate | DATE | CHAR, VARCHAR, LONGVARCHAR, DATE, TIMESTAMP |
-| getTime | TIME | CHAR, VARCHAR, LONGVARCHAR, TIME, TIMESTAMP |
-| getTimestamp | TIMESTAMP | CHAR, VARCHAR, LONGVARCHAR, DATE, TIME, TIMESTAMP |
-| getAsciiStream | LONGVARCHAR | CHAR, VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, CLOB, NCLOB |
-| getBinaryStream | LONGVARBINARY | BINARY, VARBINARY, LONGVARBINARY |
-| getCharacterStream | LONGVARCHAR | CHAR, VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, CLOB, NCHAR, NVARCHAR, LONGNVARCHAR, NCLOB, SQLXML |
-| getNCharacterStream | LONGNVARCHAR | CHAR, VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, CLOB, NCHAR, NVARCHAR, LONGNVARCHAR, NCLOB, SQLXML |
-| getClob | CLOB | CLOB, NCLOB |
-| getNClob | NCLOB | CLOB, NCLOB |
-| getBlob | BLOB | BLOB |
-| getArray | ARRAY | ARRAY |
-| getRef | REF | REF |
-| getURL | DATALINK | DATALINK |
-| getObject | STRUCT, JAVA_OBJECT | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, DATE, TIME, TIMESTAMP, CLOB, BLOB, ARRAY, REF, DATALINK, STRUCT, JAVA_OBJECT, ROWID, NCHAR, NVARCHAR, LONGNVARCHAR, NCLOB, SQLXML, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE |
-| getRowId | ROWID | ROWID |
-| getSQLXML | SQLXML | SQLXML |
+| Java 对象类型           | 推荐的 JDBC 类型         | 支持的 JDBC 类型                                                                                                                                                                                                                                                                                                                           |
+| ------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| getByte             | TINYINT             | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR, ROWID                                                                                                                                                                                                            |
+| getShort            | SMALLINT            | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR                                                                                                                                                                                                                   |
+| getInt              | INTEGER             | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR                                                                                                                                                                                                                   |
+| getLong             | BIGINT              | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR                                                                                                                                                                                                                   |
+| getFloat            | REAL                | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR                                                                                                                                                                                                                   |
+| getDouble           | FLOAT, DOUBLE       | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR                                                                                                                                                                                                                   |
+| getBigDecimal       | DECIMAL, NUMERIC    | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR                                                                                                                                                                                                                   |
+| getBoolean          | BIT, BOOLEAN        | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR                                                                                                                                                                                                                   |
+| getString           | CHAR, VARCHAR       | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, DATE, TIME, TIMESTAMP, DATALINK, NCHAR, NVARCHAR, LONGNVARCHAR                                                                                                                 |
+| getNString          | NCHAR, NVARCHAR     | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, DATE, TIME, TIMESTAMP, DATALINK, NCHAR, NVARCHAR, LONGNVARCHAR                                                                                                                 |
+| getBytes            | BINARY, VARBINARY   | BINARY, VARBINARY, LONGVARBINARY                                                                                                                                                                                                                                                                                                      |
+| getDate             | DATE                | CHAR, VARCHAR, LONGVARCHAR, DATE, TIMESTAMP                                                                                                                                                                                                                                                                                           |
+| getTime             | TIME                | CHAR, VARCHAR, LONGVARCHAR, TIME, TIMESTAMP                                                                                                                                                                                                                                                                                           |
+| getTimestamp        | TIMESTAMP           | CHAR, VARCHAR, LONGVARCHAR, DATE, TIME, TIMESTAMP                                                                                                                                                                                                                                                                                     |
+| getAsciiStream      | LONGVARCHAR         | CHAR, VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, CLOB, NCLOB                                                                                                                                                                                                                                                             |
+| getBinaryStream     | LONGVARBINARY       | BINARY, VARBINARY, LONGVARBINARY                                                                                                                                                                                                                                                                                                      |
+| getCharacterStream  | LONGVARCHAR         | CHAR, VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, CLOB, NCHAR, NVARCHAR, LONGNVARCHAR, NCLOB, SQLXML                                                                                                                                                                                                                      |
+| getNCharacterStream | LONGNVARCHAR        | CHAR, VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, CLOB, NCHAR, NVARCHAR, LONGNVARCHAR, NCLOB, SQLXML                                                                                                                                                                                                                      |
+| getClob             | CLOB                | CLOB, NCLOB                                                                                                                                                                                                                                                                                                                           |
+| getNClob            | NCLOB               | CLOB, NCLOB                                                                                                                                                                                                                                                                                                                           |
+| getBlob             | BLOB                | BLOB                                                                                                                                                                                                                                                                                                                                  |
+| getArray            | ARRAY               | ARRAY                                                                                                                                                                                                                                                                                                                                 |
+| getRef              | REF                 | REF                                                                                                                                                                                                                                                                                                                                   |
+| getURL              | DATALINK            | DATALINK                                                                                                                                                                                                                                                                                                                              |
+| getObject           | STRUCT, JAVA_OBJECT | TINYINT, SMALLINT, INTEGER, BIGINT, REAL, FLOAT, DOUBLE, DECIMAL, NUMERIC, BIT, BOOLEAN, CHAR, VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, DATE, TIME, TIMESTAMP, CLOB, BLOB, ARRAY, REF, DATALINK, STRUCT, JAVA_OBJECT, ROWID, NCHAR, NVARCHAR, LONGNVARCHAR, NCLOB, SQLXML, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE |
+| getRowId            | ROWID               | ROWID                                                                                                                                                                                                                                                                                                                                 |
+| getSQLXML           | SQLXML              | SQLXML                                                                                                                                                                                                                                                                                                                                |
